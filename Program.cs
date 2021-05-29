@@ -38,11 +38,16 @@ namespace SerialSequencer
                 
                 switch (cmd)
                 {
-                    case "send_single":
+                    case "send_single_line":
                         Console.WriteLine("Data to Send: >");
                         param = Console.ReadLine();
                         
                         ComPort.WriteLine(param);
+                        break;
+                    case "send_data":
+                        Console.Write("Data: ");
+                        param = Console.ReadLine();
+                        Console.Write(param);
                         break;
                     case "send_sequence":
                         Console.WriteLine("Command sequence: >");
